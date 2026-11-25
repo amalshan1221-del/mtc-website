@@ -1,0 +1,1 @@
+Put your own photos here (JPG, ~1600px wide, under 300 KB) and point the <img src> in the pages to them.

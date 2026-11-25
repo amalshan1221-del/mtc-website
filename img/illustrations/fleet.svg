@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="t">
+  <title id="t">MTC delivery fleet on the highway across the Saudi desert</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCEEE3"/><stop offset="1" stop-color="#F7F3EA"/></linearGradient>
+    <g id="truck">
+      <rect x="0" y="0" width="150" height="74" rx="6" fill="#187043"/>
+      <rect x="0" y="0" width="150" height="9" rx="4" fill="#0E4D2F" opacity=".4"/>
+      <text x="75" y="42" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF" letter-spacing="2">MTC</text>
+      <path d="M14 56h122" stroke="#A8D5BA" stroke-width="3" stroke-linecap="round"/>
+      <path d="M156 18h30c5 0 9 2 11 6l13 19c2 3 3 5 3 8v23h-57z" fill="#0E4D2F"/>
+      <path d="M163 25h22c3 0 4 1 6 3l9 14h-37z" fill="#BFDCCB"/>
+      <rect x="150" y="12" width="7" height="62" fill="#1F2933"/>
+      <rect x="-4" y="72" width="220" height="7" rx="3" fill="#1F2933"/>
+      <circle cx="32" cy="82" r="14" fill="#1F2933"/><circle cx="32" cy="82" r="6" fill="#CBD5D1"/>
+      <circle cx="68" cy="82" r="14" fill="#1F2933"/><circle cx="68" cy="82" r="6" fill="#CBD5D1"/>
+      <circle cx="184" cy="82" r="14" fill="#1F2933"/><circle cx="184" cy="82" r="6" fill="#CBD5D1"/>
+      <rect x="206" y="58" width="9" height="7" rx="2" fill="#F2B544"/>
+    </g>
+  </defs>
+  <rect width="600" height="400" rx="24" fill="url(#sky)"/>
+  <circle cx="470" cy="96" r="40" fill="#FFFFFF" opacity=".9"/>
+  <!-- dunes -->
+  <path d="M0 230c80-40 150-40 220-10s150 30 220-5 120-30 160-10v95H0z" fill="#EAD9B8"/>
+  <path d="M0 260c90-30 170-20 250 0s160 15 230-10 90-15 120-5v65H0z" fill="#E0CBA3"/>
+  <!-- distant city -->
+  <g fill="#C9DDCF" opacity=".9"><rect x="60" y="176" width="16" height="50"/><rect x="80" y="160" width="20" height="66"/><rect x="104" y="184" width="14" height="42"/><rect x="122" y="168" width="10" height="58"/><path d="M127 168l0-18 2 0 0 18z"/></g>
+  <!-- palms -->
+  <g><path d="M540 300c3-28 1-48-4-70" stroke="#8A6A45" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <g fill="#2E8B57"><path d="M536 230c-18-5-30 3-35 12 13-7 23-7 35-12z"/><path d="M536 230c7-16 21-20 33-16-13 1-23 8-33 16z"/><path d="M536 230c-5-15-20-21-31-19 13 3 23 10 31 19z"/><path d="M536 230c16-3 30 5 33 15-12-7-21-8-33-15z"/></g></g>
+  <!-- highway -->
+  <path d="M0 296h600v80a24 24 0 0 1-24 24H24a24 24 0 0 1-24-24z" fill="#1F2933"/>
+  <path d="M0 340h600" stroke="#F2F5F3" stroke-width="3" stroke-dasharray="28 20" opacity=".7"/>
+  <path d="M0 298h600" stroke="#56626D" stroke-width="3"/>
+  <!-- trucks -->
+  <g transform="translate(330 222) scale(.78)"><use href="#truck"/></g>
+  <g transform="translate(40 262)"><use href="#truck"/></g>
+  <!-- speed lines -->
+  <g stroke="#A8D5BA" stroke-width="3" stroke-linecap="round" opacity=".8"><path d="M6 286h22M10 300h14M300 250h20M306 262h12"/></g>
+  <!-- route badge -->
+  <g transform="translate(400 40)">
+    <rect width="168" height="58" rx="14" fill="#FFFFFF"/>
+    <circle cx="30" cy="29" r="16" fill="#EAF4EE"/>
+    <path d="M30 19c-5 0-9 4-9 9 0 7 9 15 9 15s9-8 9-15c0-5-4-9-9-9z" fill="#187043"/><circle cx="30" cy="28" r="3.2" fill="#fff"/>
+    <rect x="54" y="18" width="94" height="8" rx="4" fill="#187043"/>
+    <rect x="54" y="33" width="66" height="7" rx="3.5" fill="#CFE1D6"/>
+  </g>
+</svg>

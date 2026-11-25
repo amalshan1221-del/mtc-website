@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="t">
+  <title id="t">A supermarket aisle with well-stocked shelves of food, beverages and household products supplied by MTC</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EAF4EE"/><stop offset="1" stop-color="#F8FBF9"/></linearGradient>
+    <g id="bottles"><rect x="0" y="8" width="12" height="34" rx="4" fill="#2E8B57"/><rect x="3" y="0" width="6" height="10" rx="2" fill="#0E4D2F"/><rect x="16" y="8" width="12" height="34" rx="4" fill="#187043"/><rect x="19" y="0" width="6" height="10" rx="2" fill="#0E4D2F"/><rect x="32" y="8" width="12" height="34" rx="4" fill="#2E8B57"/><rect x="35" y="0" width="6" height="10" rx="2" fill="#0E4D2F"/><rect x="0" y="22" width="44" height="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g id="cans"><rect x="0" y="16" width="14" height="26" rx="2" fill="#F2B544"/><rect x="16" y="16" width="14" height="26" rx="2" fill="#E0A030"/><rect x="32" y="16" width="14" height="26" rx="2" fill="#F2B544"/><rect x="8" y="0" width="14" height="16" rx="2" fill="#E0A030"/><rect x="24" y="0" width="14" height="16" rx="2" fill="#F2B544"/><rect x="0" y="24" width="46" height="6" fill="#FFFFFF" opacity=".5"/></g>
+    <g id="boxes"><rect x="0" y="4" width="22" height="38" rx="2" fill="#D9B48A"/><rect x="24" y="0" width="22" height="42" rx="2" fill="#C9A274"/><rect x="4" y="14" width="14" height="10" fill="#FFFFFF" opacity=".6"/><rect x="28" y="12" width="14" height="10" fill="#FFFFFF" opacity=".6"/></g>
+    <g id="sacks"><path d="M2 42c-2-14 0-30 4-38h34c4 8 6 24 4 38z" fill="#FFFFFF"/><path d="M6 4h34" stroke="#CBD5D1" stroke-width="3"/><rect x="8" y="18" width="30" height="12" rx="2" fill="#187043"/></g>
+    <g id="jars"><rect x="0" y="12" width="14" height="30" rx="4" fill="#A8D5BA"/><rect x="1" y="6" width="12" height="7" rx="2" fill="#187043"/><rect x="16" y="12" width="14" height="30" rx="4" fill="#FFFFFF"/><rect x="17" y="6" width="12" height="7" rx="2" fill="#187043"/><rect x="32" y="12" width="14" height="30" rx="4" fill="#A8D5BA"/><rect x="33" y="6" width="12" height="7" rx="2" fill="#187043"/></g>
+  </defs>
+  <rect width="600" height="400" rx="24" fill="url(#bg)"/>
+  <!-- store sign -->
+  <rect x="150" y="26" width="300" height="34" rx="17" fill="#187043"/>
+  <rect x="180" y="38" width="160" height="10" rx="5" fill="#FFFFFF" opacity=".9"/><circle cx="410" cy="43" r="8" fill="#A8D5BA"/>
+  <!-- floor -->
+  <path d="M0 340h600v36a24 24 0 0 1-24 24H24a24 24 0 0 1-24-24z" fill="#D3E5DA"/>
+  <!-- shelf unit -->
+  <rect x="40" y="80" width="520" height="262" rx="6" fill="#FFFFFF"/>
+  <rect x="40" y="80" width="520" height="16" rx="6" fill="#0E4D2F"/>
+  <g fill="#187043"><rect x="40" y="150" width="520" height="8"/><rect x="40" y="214" width="520" height="8"/><rect x="40" y="278" width="520" height="8"/><rect x="40" y="334" width="520" height="8"/></g>
+  <g fill="#E1E8E4"><rect x="300" y="96" width="4" height="238"/></g>
+  <!-- row 1 -->
+  <use href="#bottles" x="56" y="108"/><use href="#bottles" x="110" y="108"/><use href="#bottles" x="164" y="108"/><use href="#cans" x="222" y="108"/>
+  <use href="#jars" x="316" y="108"/><use href="#jars" x="370" y="108"/><use href="#boxes" x="426" y="108"/><use href="#boxes" x="480" y="108"/>
+  <!-- row 2 -->
+  <use href="#sacks" x="56" y="172"/><use href="#sacks" x="108" y="172"/><use href="#sacks" x="160" y="172"/><use href="#sacks" x="212" y="172"/>
+  <use href="#cans" x="316" y="172"/><use href="#cans" x="370" y="172"/><use href="#cans" x="424" y="172"/><use href="#bottles" x="482" y="172"/>
+  <!-- row 3 -->
+  <use href="#boxes" x="56" y="236"/><use href="#boxes" x="108" y="236"/><use href="#jars" x="160" y="236"/><use href="#jars" x="214" y="236"/>
+  <use href="#bottles" x="316" y="236"/><use href="#sacks" x="370" y="236"/><use href="#boxes" x="424" y="236"/><use href="#jars" x="478" y="236"/>
+  <!-- price strips -->
+  <g fill="#F2B544"><rect x="70" y="152" width="18" height="5" rx="1"/><rect x="200" y="152" width="18" height="5" rx="1"/><rect x="340" y="152" width="18" height="5" rx="1"/><rect x="470" y="152" width="18" height="5" rx="1"/>
+    <rect x="70" y="216" width="18" height="5" rx="1"/><rect x="200" y="216" width="18" height="5" rx="1"/><rect x="340" y="216" width="18" height="5" rx="1"/><rect x="470" y="216" width="18" height="5" rx="1"/>
+    <rect x="70" y="280" width="18" height="5" rx="1"/><rect x="200" y="280" width="18" height="5" rx="1"/><rect x="340" y="280" width="18" height="5" rx="1"/><rect x="470" y="280" width="18" height="5" rx="1"/></g>
+  <!-- trolley -->
+  <g transform="translate(470 300)" fill="none" stroke="#1F2933" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 0h12l10 34h46l8-26H18"/><circle cx="28" cy="46" r="5" fill="#1F2933"/><circle cx="62" cy="46" r="5" fill="#1F2933"/>
+  </g>
+  <g transform="translate(492 280)"><rect x="0" y="12" width="16" height="16" fill="#D9B48A"/><rect x="18" y="6" width="14" height="22" rx="3" fill="#187043"/><rect x="34" y="14" width="14" height="14" fill="#F2B544"/></g>
+</svg>

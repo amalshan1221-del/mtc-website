@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="t">
+  <title id="t">Imported brands arriving by container ship at a Red Sea port, ready for MTC distribution</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DDEEE4"/><stop offset="1" stop-color="#F6FBF8"/></linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2E8B57"/><stop offset="1" stop-color="#0E4D2F"/></linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="24" fill="url(#sky)"/>
+  <circle cx="120" cy="90" r="38" fill="#FFFFFF" opacity=".9"/>
+  <!-- sea -->
+  <path d="M0 270h600v106a24 24 0 0 1-24 24H24a24 24 0 0 1-24-24z" fill="url(#sea)"/>
+  <g stroke="#A8D5BA" stroke-width="2.5" stroke-linecap="round" opacity=".5"><path d="M40 310h40M140 340h56M300 372h48M470 330h40M520 362h30"/></g>
+  <!-- quay -->
+  <rect x="380" y="256" width="220" height="24" fill="#CBD5D1"/>
+  <rect x="380" y="276" width="220" height="10" fill="#9AA8A1"/>
+  <!-- crane -->
+  <g fill="none" stroke="#187043" stroke-width="7" stroke-linejoin="round">
+    <path d="M470 256V96M530 256V96M470 96h60M470 150l60 50M530 150l-60 50"/>
+    <path d="M300 96h270"/>
+  </g>
+  <rect x="440" y="80" width="120" height="18" rx="3" fill="#0E4D2F"/>
+  <rect x="356" y="98" width="4" height="70" fill="#1F2933"/>
+  <rect x="336" y="168" width="44" height="18" rx="2" fill="#D9B48A"/>
+  <!-- ship -->
+  <g>
+    <path d="M30 236h330l-26 58H66z" fill="#1F2933"/>
+    <path d="M42 262h306" stroke="#56626D" stroke-width="3"/>
+    <rect x="300" y="170" width="44" height="66" rx="3" fill="#FFFFFF"/>
+    <g fill="#9FCBB1"><rect x="308" y="180" width="10" height="9"/><rect x="326" y="180" width="10" height="9"/><rect x="308" y="198" width="10" height="9"/><rect x="326" y="198" width="10" height="9"/></g>
+    <rect x="316" y="150" width="10" height="20" fill="#187043"/>
+    <!-- containers -->
+    <g>
+      <rect x="50" y="206" width="56" height="30" fill="#187043"/><rect x="108" y="206" width="56" height="30" fill="#D9B48A"/><rect x="166" y="206" width="56" height="30" fill="#2E8B57"/><rect x="224" y="206" width="56" height="30" fill="#FFFFFF"/>
+      <rect x="50" y="174" width="56" height="30" fill="#C9A274"/><rect x="108" y="174" width="56" height="30" fill="#0E4D2F"/><rect x="166" y="174" width="56" height="30" fill="#A8D5BA"/><rect x="224" y="174" width="56" height="30" fill="#187043"/>
+      <rect x="108" y="142" width="56" height="30" fill="#2E8B57"/><rect x="166" y="142" width="56" height="30" fill="#E4C49C"/>
+      <g stroke="#000" stroke-opacity=".12" stroke-width="2"><path d="M62 210v22M74 210v22M86 210v22M98 210v22M120 210v22M132 210v22M144 210v22M156 210v22M178 210v22M190 210v22M202 210v22M214 210v22M236 210v22M248 210v22M260 210v22M272 210v22M62 178v22M74 178v22M86 178v22M98 178v22M120 178v22M132 178v22M144 178v22M156 178v22M178 178v22M190 178v22M202 178v22M214 178v22M236 178v22M248 178v22M260 178v22M272 178v22M120 146v22M132 146v22M144 146v22M156 146v22M178 146v22M190 146v22M202 146v22M214 146v22"/></g>
+    </g>
+  </g>
+  <!-- stacked containers on quay -->
+  <rect x="400" y="226" width="56" height="30" fill="#187043"/><rect x="540" y="226" width="56" height="30" fill="#D9B48A"/><rect x="540" y="194" width="56" height="30" fill="#0E4D2F"/>
+</svg>

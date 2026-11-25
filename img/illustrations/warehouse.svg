@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" role="img" aria-labelledby="t">
+  <title id="t">Inside an MTC warehouse: high-bay racking stocked with cartons, a reach truck and a stock controller</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E4F0E9"/><stop offset="1" stop-color="#F5FAF7"/></linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CFE1D6"/><stop offset="1" stop-color="#BCD6C6"/></linearGradient>
+    <g id="rack">
+      <rect x="0" y="0" width="8" height="270" fill="#187043"/><rect x="152" y="0" width="8" height="270" fill="#187043"/>
+      <rect x="0" y="80" width="160" height="7" fill="#0E4D2F"/><rect x="0" y="166" width="160" height="7" fill="#0E4D2F"/><rect x="0" y="252" width="160" height="7" fill="#0E4D2F"/>
+      <g stroke="#2E8B57" stroke-width="2" opacity=".5"><path d="M8 10 152 78M8 96l144 66M8 182l144 66"/></g>
+    </g>
+    <g id="load1">
+      <rect x="0" y="62" width="64" height="6" fill="#8A6A45"/>
+      <rect x="2" y="30" width="30" height="32" fill="#D9B48A"/><rect x="33" y="30" width="30" height="32" fill="#C9A274"/>
+      <rect x="8" y="4" width="48" height="26" fill="#E4C49C"/>
+      <path d="M2 46h30M33 46h30M8 17h48" stroke="#B48A5C" stroke-width="1.5"/>
+      <rect x="22" y="10" width="20" height="6" fill="#187043"/>
+    </g>
+    <g id="load2">
+      <rect x="0" y="62" width="64" height="6" fill="#8A6A45"/>
+      <rect x="2" y="22" width="60" height="40" rx="2" fill="#FFFFFF"/>
+      <rect x="2" y="22" width="60" height="12" fill="#A8D5BA"/>
+      <path d="M12 44h40M12 52h28" stroke="#CFE1D6" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g id="load3">
+      <rect x="0" y="62" width="64" height="6" fill="#8A6A45"/>
+      <rect x="2" y="14" width="19" height="48" rx="3" fill="#2E8B57"/><rect x="23" y="14" width="19" height="48" rx="3" fill="#187043"/><rect x="44" y="14" width="18" height="48" rx="3" fill="#2E8B57"/>
+      <rect x="2" y="30" width="60" height="10" fill="#FFFFFF" opacity=".55"/>
+    </g>
+  </defs>
+  <rect width="600" height="440" rx="24" fill="url(#bg)"/>
+  <!-- roof trusses & lights -->
+  <g stroke="#CFE1D6" stroke-width="3"><path d="M0 40h600M40 40l40-30M160 40l40-30M280 40l40-30M400 40l40-30M520 40l40-30"/></g>
+  <g fill="#FFFFFF"><rect x="90" y="40" width="60" height="8" rx="4"/><rect x="270" y="40" width="60" height="8" rx="4"/><rect x="450" y="40" width="60" height="8" rx="4"/></g>
+  <g fill="#FFFFFF" opacity=".35"><path d="M90 48h60l30 80H60z"/><path d="M270 48h60l30 80H240z"/><path d="M450 48h60l30 80H420z"/></g>
+  <!-- floor -->
+  <path d="M0 340h600v76a24 24 0 0 1-24 24H24a24 24 0 0 1-24-24z" fill="url(#floor)"/>
+  <path d="M0 360h600" stroke="#F2B544" stroke-width="4" stroke-dasharray="22 14"/>
+  <!-- racks -->
+  <g transform="translate(24 70)"><use href="#rack"/>
+    <use href="#load1" x="12" y="12"/><use href="#load2" x="84" y="12"/>
+    <use href="#load3" x="12" y="98"/><use href="#load1" x="84" y="98"/>
+    <use href="#load2" x="12" y="184"/><use href="#load3" x="84" y="184"/></g>
+  <g transform="translate(212 70)"><use href="#rack"/>
+    <use href="#load3" x="12" y="12"/><use href="#load1" x="84" y="12"/>
+    <use href="#load1" x="12" y="98"/><use href="#load2" x="84" y="98"/>
+    <use href="#load1" x="12" y="184"/></g>
+  <g transform="translate(400 70)"><use href="#rack"/>
+    <use href="#load2" x="12" y="12"/><use href="#load3" x="84" y="12"/>
+    <use href="#load1" x="12" y="98"/><use href="#load1" x="84" y="98"/>
+    <use href="#load3" x="12" y="184"/><use href="#load2" x="84" y="184"/></g>
+  <!-- aisle signs -->
+  <g font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">
+    <rect x="80" y="54" width="48" height="22" rx="5" fill="#0E4D2F"/><text x="104" y="70">A-01</text>
+    <rect x="268" y="54" width="48" height="22" rx="5" fill="#0E4D2F"/><text x="292" y="70">B-02</text>
+    <rect x="456" y="54" width="48" height="22" rx="5" fill="#0E4D2F"/><text x="480" y="70">C-03</text>
+  </g>
+  <!-- reach truck lifting pallet into empty slot (rack 2, bay 2 bottom) -->
+  <g>
+    <rect x="292" y="250" width="6" height="140" fill="#1F2933"/><rect x="300" y="250" width="6" height="140" fill="#1F2933"/>
+    <rect x="296" y="318" width="70" height="5" fill="#1F2933"/>
+    <rect x="296" y="312" width="66" height="6" fill="#8A6A45"/>
+    <rect x="298" y="280" width="31" height="32" fill="#D9B48A"/><rect x="330" y="280" width="31" height="32" fill="#E4C49C"/>
+    <path d="M298 296h31M330 296h31" stroke="#B48A5C" stroke-width="1.5"/>
+    <rect x="236" y="340" width="70" height="42" rx="7" fill="#187043"/>
+    <path d="M246 340v-34h34l8 34" fill="none" stroke="#1F2933" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="232" y="352" width="10" height="20" rx="3" fill="#F2B544"/>
+    <circle cx="254" cy="388" r="10" fill="#1F2933"/><circle cx="254" cy="388" r="4" fill="#CBD5D1"/>
+    <circle cx="292" cy="390" r="7" fill="#1F2933"/>
+  </g>
+  <!-- stock controller with tablet -->
+  <g transform="translate(470 290)">
+    <ellipse cx="22" cy="114" rx="26" ry="5" fill="#0E4D2F" opacity=".15"/>
+    <rect x="9" y="70" width="11" height="42" rx="5" fill="#1F2933"/><rect x="24" y="70" width="11" height="42" rx="5" fill="#1F2933"/>
+    <path d="M4 34c0-10 8-16 18-16s18 6 18 16v40H4z" fill="#187043"/>
+    <path d="M6 40h32v6H6z" fill="#F2B544"/>
+    <circle cx="22" cy="8" r="11" fill="#C08A5B"/>
+    <path d="M11 6c0-8 6-12 11-12s11 4 11 12z" fill="#FFFFFF"/>
+    <rect x="-10" y="40" width="20" height="26" rx="3" fill="#1F2933" transform="rotate(-12 0 53)"/>
+    <rect x="-7" y="44" width="14" height="18" rx="2" fill="#A8D5BA" transform="rotate(-12 0 53)"/>
+  </g>
+</svg>
