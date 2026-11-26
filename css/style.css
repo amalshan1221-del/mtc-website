@@ -958,3 +958,40 @@ html[lang="ar"] .portfolio-label { letter-spacing: 0; text-transform: none; font
 }
 /* Elements waiting to slide in sideways must never widen the page */
 main { overflow-x: clip; }
+
+/* ---------- Homepage hero: full-width photo banner ---------- */
+.hero.hero-photo { background: var(--green-deep); padding-block: 132px 196px; min-height: min(88vh, 860px); display: grid; align-items: center; isolation: isolate; }
+.hero.hero-photo::before { display: none; }
+.hero-bg { position: absolute; inset: 0; z-index: -1; overflow: hidden; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 96% 55%; animation: hero-in 1.6s var(--ease) both; }
+html[dir="rtl"] .hero-bg img { object-position: 28% 55%; }
+/* deep MTC-green fade on the text side, soft vignette top and bottom */
+.hero-bg::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(4, 36, 23, .97) 0%, rgba(4, 36, 23, .9) 30%, rgba(4, 36, 23, .6) 50%, rgba(4, 36, 23, .12) 72%, rgba(4, 36, 23, 0) 100%),
+    linear-gradient(0deg, rgba(4, 36, 23, .9) 0%, rgba(4, 36, 23, 0) 30%),
+    linear-gradient(180deg, rgba(4, 36, 23, .45) 0%, rgba(4, 36, 23, 0) 22%);
+}
+html[dir="rtl"] .hero-bg::after {
+  background:
+    linear-gradient(270deg, rgba(4, 36, 23, .97) 0%, rgba(4, 36, 23, .9) 30%, rgba(4, 36, 23, .6) 50%, rgba(4, 36, 23, .12) 72%, rgba(4, 36, 23, 0) 100%),
+    linear-gradient(0deg, rgba(4, 36, 23, .9) 0%, rgba(4, 36, 23, 0) 30%),
+    linear-gradient(180deg, rgba(4, 36, 23, .45) 0%, rgba(4, 36, 23, 0) 22%);
+}
+.hero-photo .hero-grid { grid-template-columns: minmax(0, 660px); }
+.hero-photo h1 { text-shadow: 0 2px 24px rgba(0, 0, 0, .25); }
+.hero-photo .lead { color: #D3E6DA; }
+.hero-photo .hero-trust { border-top-color: rgba(255, 255, 255, .2); }
+@keyframes hero-in { from { opacity: 0; transform: scale(1.06); } to { opacity: 1; transform: scale(1); } }
+@media (max-width: 1024px) {
+  .hero.hero-photo { padding-block: 96px 180px; min-height: 0; }
+  .hero-bg img, html[dir="rtl"] .hero-bg img { object-position: 22% 45%; }
+  .hero-bg::after, html[dir="rtl"] .hero-bg::after {
+    background: linear-gradient(180deg, rgba(4, 36, 23, .94) 0%, rgba(4, 36, 23, .9) 55%, rgba(4, 36, 23, .62) 82%, rgba(4, 36, 23, .8) 100%);
+  }
+}
+@media (max-width: 760px) {
+  .hero.hero-photo { padding-block: 64px 170px; }
+}
+@media (prefers-reduced-motion: reduce) { .hero-bg img { animation: none; } }
