@@ -58,7 +58,7 @@
 
   /* ---------- Header + mobile menu ---------- */
   var header = document.querySelector(".site-header");
-  var onScroll = function () { if (header) header.classList.toggle("scrolled", window.scrollY > 8); };
+  var onScroll = function () { if (header) header.classList.toggle("scrolled", window.scrollY > 40); };
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
