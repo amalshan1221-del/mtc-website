@@ -833,7 +833,8 @@ html[dir="rtl"].js .reveal.in.from-start, html[dir="rtl"].js .reveal.in.from-end
 }
 .marquee-track { display: flex; width: max-content; padding-block: 6px 10px; animation: marquee 36s linear infinite; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
-.marquee .brand-slot { flex: 0 0 auto; width: 190px; margin-inline-end: 16px; }
+.marquee .brand-slot { flex: 0 0 auto; width: 190px; margin-inline-end: 16px; padding: 14px 16px; }
+.marquee .brand-slot img { max-height: 92px; max-width: 100%; }
 html[dir="rtl"] .marquee-track { animation-direction: reverse; }
 @media (max-width: 760px) { .marquee .brand-slot { width: 150px; margin-inline-end: 12px; } .marquee-track { animation-duration: 28s; } }
 
@@ -895,7 +896,7 @@ html[lang="ar"] .portfolio-label { letter-spacing: 0; text-transform: none; font
   transition: box-shadow .25s, border-color .25s, transform .25s var(--ease);
 }
 .logo-tile:hover { border-color: #CFE0D5; box-shadow: var(--shadow); transform: translateY(-3px); }
-.logo-tile img { width: auto; height: auto; max-width: 78%; max-height: 80px; object-fit: contain; }
+.logo-tile img { width: auto; height: auto; max-width: 78%; max-height: 96px; object-fit: contain; }
 
 .portfolio-more { margin-top: 40px; display: grid; justify-items: center; gap: 12px; text-align: center; }
 .portfolio-more p { margin: 0; font-size: clamp(17px, 1.5vw, 20px); font-weight: 700; color: var(--green-dark); }
@@ -934,7 +935,7 @@ html[lang="ar"] .portfolio-label { letter-spacing: 0; text-transform: none; font
 @media (max-width: 760px) {
   .logo-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .logo-tile { height: 112px; padding: 16px 18px; }
-  .logo-tile img { max-height: 58px; max-width: 82%; }
+  .logo-tile img { max-height: 72px; max-width: 82%; }
   .dir-grid { grid-template-columns: 1fr; }
   .dir-card { padding: 20px; }
   .dir-total strong { font-size: 28px; }
