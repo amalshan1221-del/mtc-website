@@ -324,6 +324,13 @@
       return { code: p[0], en: p[1], ar: p[2], unit: p[3], cat: p[4], img: p[5] || "", text: norm([p[0], p[1], p[2], c.en, c.ar].join(" ")) };
     });
 
+    // Category photo used when a product has no brand photo (files: img/photos/categories/category-*.webp)
+    var CAT_IMG = { "beverages": "beverages", "confectionery": "confectionery-snacks", "rice-grains": "rice-grains", "edible-oils": "edible-oils", "canned": "canned-food", "dairy": "dairy", "spices": "spices-seasonings", "household": "household-personal-care", "foodstuffs": "food-stuffs", "frozen": "frozen-foods" };
+    function catImg(cat) {
+      var f = "img/photos/categories/category-" + (CAT_IMG[cat] || "food-stuffs");
+        return '<div class="sku-media is-cat"><img src="' + f + '-800.webp" srcset="' + f + '-800.webp 800w, ' + f + '.webp 1400w" sizes="(max-width: 760px) 50vw, 25vw" alt="" loading="lazy" decoding="async" width="800" height="640"></div>';
+    }
+
     function card(p) {
       var c = cats[p.cat] || { icon: "", en: "", ar: "" }, u = UNITS[p.unit];
       var arName = p.ar || p.en;
@@ -331,7 +338,7 @@
       // Brand photo when we have one (img/products/), otherwise the category photo
       var media = p.img
         ? '<div class="sku-media is-brand"><img src="img/products/' + esc(p.img) + '" alt="" loading="lazy" decoding="async" width="400" height="400"></div>'
-        : '<div class="sku-media is-cat"><img src="img/photos/categories/' + esc(p.cat) + '.jpg" alt="" loading="lazy" decoding="async" width="900" height="720"></div>';
+        : catImg(p.cat);
       return '<article class="sku" data-cat="' + esc(p.cat) + '" data-code="' + esc(p.code) + '">' + media +
         '<div class="sku-head"><span class="sku-ic">' + c.icon + '</span>' +
           '<span class="sku-cat"><span lang="en">' + esc(c.en) + '</span><span lang="ar">' + esc(c.ar) + '</span></span>' +

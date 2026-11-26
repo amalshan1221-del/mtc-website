@@ -1135,3 +1135,7 @@ html[dir="rtl"] .hero-bg::after {
   .nav-open .main-nav li, .nav-open .main-nav .nav-cta { animation: none; }
 }
 .nav-open .site-header .menu-btn span { background-color: transparent !important; }
+
+/* Category card photos: keep products visible, leave the badge corner (bottom-left; bottom-right in Arabic) clean */
+.cat-photo img { object-position: right center; }
+html[dir="rtl"] .cat-photo img { object-position: left center; }
