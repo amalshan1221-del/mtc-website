@@ -959,39 +959,80 @@ html[lang="ar"] .portfolio-label { letter-spacing: 0; text-transform: none; font
 /* Elements waiting to slide in sideways must never widen the page */
 main { overflow-x: clip; }
 
-/* ---------- Homepage hero: full-width photo banner ---------- */
-.hero.hero-photo { background: var(--green-deep); padding-block: 132px 196px; min-height: min(88vh, 860px); display: grid; align-items: center; isolation: isolate; }
+/* ---------- Homepage hero: MTC brand artwork background ---------- */
+.hero.hero-photo { background: #06331F; padding-block: 132px 196px; min-height: min(88vh, 860px); display: grid; align-items: center; isolation: isolate; }
 .hero.hero-photo::before { display: none; }
 .hero-bg { position: absolute; inset: 0; z-index: -1; overflow: hidden; }
-.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 96% 55%; animation: hero-in 1.6s var(--ease) both; }
-html[dir="rtl"] .hero-bg img { object-position: 28% 55%; }
-/* deep MTC-green fade on the text side, soft vignette top and bottom */
+.hero-bg picture, .hero-bg img { display: block; width: 100%; height: 100%; }
+.hero-bg img { object-fit: cover; object-position: 50% 50%; }
+/* the artwork is already dark on the text side; just a light fade for contrast and to blend into the stats card */
 .hero-bg::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(4, 36, 23, .97) 0%, rgba(4, 36, 23, .9) 30%, rgba(4, 36, 23, .6) 50%, rgba(4, 36, 23, .12) 72%, rgba(4, 36, 23, 0) 100%),
-    linear-gradient(0deg, rgba(4, 36, 23, .9) 0%, rgba(4, 36, 23, 0) 30%),
-    linear-gradient(180deg, rgba(4, 36, 23, .45) 0%, rgba(4, 36, 23, 0) 22%);
+    linear-gradient(90deg, rgba(3, 30, 19, .5) 0%, rgba(3, 30, 19, .2) 40%, rgba(3, 30, 19, 0) 60%),
+    linear-gradient(0deg, rgba(3, 30, 19, .5) 0%, rgba(3, 30, 19, 0) 26%);
 }
+/* Arabic: text sits on the right over the MTC mark, so the mark becomes a soft watermark behind it (the logo is never mirrored) */
 html[dir="rtl"] .hero-bg::after {
   background:
-    linear-gradient(270deg, rgba(4, 36, 23, .97) 0%, rgba(4, 36, 23, .9) 30%, rgba(4, 36, 23, .6) 50%, rgba(4, 36, 23, .12) 72%, rgba(4, 36, 23, 0) 100%),
-    linear-gradient(0deg, rgba(4, 36, 23, .9) 0%, rgba(4, 36, 23, 0) 30%),
-    linear-gradient(180deg, rgba(4, 36, 23, .45) 0%, rgba(4, 36, 23, 0) 22%);
+    linear-gradient(270deg, rgba(3, 30, 19, .82) 0%, rgba(3, 30, 19, .62) 40%, rgba(3, 30, 19, .15) 64%, rgba(3, 30, 19, 0) 80%),
+    linear-gradient(0deg, rgba(3, 30, 19, .5) 0%, rgba(3, 30, 19, 0) 26%);
 }
-.hero-photo .hero-grid { grid-template-columns: minmax(0, 660px); }
-.hero-photo h1 { text-shadow: 0 2px 24px rgba(0, 0, 0, .25); }
+.hero-photo .hero-grid { grid-template-columns: minmax(0, 640px); }
+.hero-photo h1 { text-shadow: 0 2px 24px rgba(0, 0, 0, .2); }
 .hero-photo .lead { color: #D3E6DA; }
-.hero-photo .hero-trust { border-top-color: rgba(255, 255, 255, .2); }
-@keyframes hero-in { from { opacity: 0; transform: scale(1.06); } to { opacity: 1; transform: scale(1); } }
-@media (max-width: 1024px) {
-  .hero.hero-photo { padding-block: 96px 180px; min-height: 0; }
-  .hero-bg img, html[dir="rtl"] .hero-bg img { object-position: 22% 45%; }
-  .hero-bg::after, html[dir="rtl"] .hero-bg::after {
-    background: linear-gradient(180deg, rgba(4, 36, 23, .94) 0%, rgba(4, 36, 23, .9) 55%, rgba(4, 36, 23, .62) 82%, rgba(4, 36, 23, .8) 100%);
-  }
+.hero-photo .hero-trust { border-top-color: rgba(255, 255, 255, .18); }
+@keyframes hero-in { from { opacity: 0; transform: scale(1.04); } to { opacity: 1; transform: none; } }
+/* landscape tablets / small laptops: full-width text crosses the mark, so deepen the fade */
+@media (max-width: 1024px) and (min-aspect-ratio: 1/1) {
+  .hero-bg::after, html[dir="rtl"] .hero-bg::after { background: linear-gradient(0deg, rgba(3, 30, 19, .6) 0%, rgba(3, 30, 19, .55) 100%); }
 }
-@media (max-width: 760px) {
-  .hero.hero-photo { padding-block: 64px 170px; }
+@media (max-width: 1024px) { .hero.hero-photo { padding-block: 96px 180px; min-height: 0; } }
+/* phones & portrait screens: tall artwork, mark anchored at the bottom, text on the clean top area */
+@media (max-aspect-ratio: 1/1) {
+  .hero-bg img, html[dir="rtl"] .hero-bg img { object-position: 50% 100%; }
+  .hero-bg::after, html[dir="rtl"] .hero-bg::after { background: linear-gradient(180deg, rgba(3, 30, 19, .35) 0%, rgba(3, 30, 19, 0) 45%, rgba(3, 30, 19, 0) 80%, rgba(3, 30, 19, .35) 100%); }
+  .hero.hero-photo { padding-block: 72px 220px; }
 }
-@media (prefers-reduced-motion: reduce) { .hero-bg img { animation: none; } }
+
+
+/* ---------- Homepage hero: clean animation layer ----------
+   .hero-art   fades the artwork in on load
+   .hero-drift very slow zoom/drift of artwork + light points together (so they stay aligned)
+   .fx-dot     gold route points pulse one after another, like a signal moving through the network
+   .hero-sheen soft light sweep across the glass MTC mark */
+.hero-art { position: absolute; inset: 0; animation: hero-in 1.6s var(--ease) both; }
+.hero-drift { position: absolute; inset: 0; transform-origin: 62% 58%; animation: hero-drift 26s ease-in-out infinite alternate; will-change: transform; }
+.hero-fx { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.hero-fx-tall { display: none; }
+.fx-dot circle { transform-box: fill-box; transform-origin: center; }
+.fx-dot .core { fill: #FFF4D6; opacity: .95; }
+.fx-dot .halo { fill: #F2CF7A; opacity: 0; filter: blur(6px); animation: fx-glow 4.2s ease-in-out infinite; animation-delay: calc(var(--d) + 1.2s); }
+.fx-dot .ring { fill: none; stroke: #F2D58C; stroke-width: 1.6; opacity: 0; animation: fx-ring 4.2s cubic-bezier(.2, .7, .3, 1) infinite; animation-delay: calc(var(--d) + 1.2s); }
+.hero-sheen {
+  position: absolute; inset: -10% -40%; pointer-events: none; mix-blend-mode: screen;
+  background: linear-gradient(105deg, transparent 42%, rgba(255, 232, 180, .07) 48%, rgba(255, 240, 205, .12) 50%, rgba(255, 232, 180, .07) 52%, transparent 58%);
+  transform: translateX(-45%); animation: hero-sheen 11s ease-in-out infinite 2.4s;
+}
+@keyframes hero-drift { from { transform: scale(1) translate3d(0, 0, 0); } to { transform: scale(1.045) translate3d(-1%, -.6%, 0); } }
+@keyframes fx-ring { 0% { opacity: 0; transform: scale(.6); } 12% { opacity: .9; } 70%, 100% { opacity: 0; transform: scale(3.4); } }
+@keyframes fx-glow { 0%, 100% { opacity: 0; transform: scale(.7); } 18% { opacity: .75; transform: scale(1.15); } 55% { opacity: .15; transform: scale(1); } }
+@keyframes hero-sheen { 0% { transform: translateX(-45%); } 55%, 100% { transform: translateX(45%); } }
+/* headline content rises in, one line after another */
+.hero-photo .hero-grid > div > * { animation: hero-rise .95s var(--ease) both; }
+.hero-photo .hero-grid > div > :nth-child(1) { animation-delay: .15s; }
+.hero-photo .hero-grid > div > :nth-child(2) { animation-delay: .3s; }
+.hero-photo .hero-grid > div > :nth-child(3) { animation-delay: .45s; }
+.hero-photo .hero-grid > div > :nth-child(4) { animation-delay: .6s; }
+.hero-photo .hero-grid > div > :nth-child(5) { animation-delay: .75s; }
+@keyframes hero-rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+/* phones & portrait screens: tall artwork, anchored at the bottom */
+@media (max-aspect-ratio: 1/1) {
+  .hero-fx-wide { display: none; }
+  .hero-fx-tall { display: block; }
+  .hero-drift { transform-origin: 50% 80%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-art, .hero-drift, .hero-sheen, .fx-dot .ring, .fx-dot .halo, .hero-photo .hero-grid > div > * { animation: none !important; }
+  .hero-sheen { display: none; }
+}
